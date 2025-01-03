@@ -1,0 +1,21 @@
+﻿<Window x:Class="WPF4DZ.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPF4DZ"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Canvas>
+        <Label Content="X:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,10,0,0"/>
+        <Label Content="Y:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="120,10,0,0"/>
+
+        <TextBox x:Name="XTextBox" HorizontalAlignment="Left" VerticalAlignment="Top" Width="100" Height="25" Margin="10,30,0,0" TextChanged="XTextBox_TextChanged" />
+        <TextBox x:Name="YTextBox" HorizontalAlignment="Left" VerticalAlignment="Top" Width="100" Height="25" Margin="120,30,0,0" TextChanged="YTextBox_TextChanged" />
+
+        <Rectangle x:Name="MovingRectangle" Fill="SkyBlue" Width="50" Height="50" 
+                   MouseLeftButtonDown="Rectangle_MouseLeftButtonDown" 
+                   MouseMove="Rectangle_MouseMove" 
+                   MouseLeftButtonUp="Rectangle_MouseLeftButtonUp" Canvas.Left="375" Canvas.Top="192" HorizontalAlignment="Left" VerticalAlignment="Center" />
+    </Canvas>
+</Window>
